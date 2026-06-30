@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Blood Stock
+</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>
+Blood Stock Management
+</h1>
+
+
+<table border="1">
+
+
+<tr>
+
+<th>Blood Group</th>
+<th>Units Available</th>
+
+</tr>
+
+
+{% for s in stock %}
+
+<tr>
+
+<td>{{s[1]}}</td>
+
+<td>{{s[2]}}</td>
+
+</tr>
+
+
+{% endfor %}
+
+
+</table>
+
+
+<br>
+
+
+<a href="/admin">
+
+<button>
+Back
+</button>
+
+</a>
+
+
+</body>
+
+</html>
