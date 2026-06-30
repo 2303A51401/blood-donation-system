@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Blood Requests
+</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>
+Blood Requests
+</h1>
+
+
+<table border="1">
+
+
+<tr>
+
+<th>Name</th>
+<th>Blood Group</th>
+<th>Units</th>
+<th>Phone</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+
+
+{% for r in requests %}
+
+<tr>
+
+
+<td>{{r[1]}}</td>
+
+<td>{{r[2]}}</td>
+
+<td>{{r[3]}}</td>
+
+<td>{{r[4]}}</td>
+
+<td>{{r[5]}}</td>
+
+
+<td>
+
+<a href="/approve/{{r[0]}}">
+<button>
+Approve
+</button>
+</a>
+
+
+<a href="/reject/{{r[0]}}">
+<button>
+Reject
+</button>
+</a>
+
+
+</td>
+
+
+</tr>
+
+
+{% endfor %}
+
+
+</table>
+
+
+<br>
+
+
+<a href="/admin">
+
+<button>
+Back
+</button>
+
+</a>
+
+
+</body>
+
+</html>

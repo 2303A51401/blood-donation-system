@@ -1,0 +1,33 @@
+<h1>
+Donor List
+</h1>
+
+
+<table border="1">
+
+
+<tr>
+
+<th>Name</th>
+<th>Blood Group</th>
+<th>Age</th>
+<th>Phone</th>
+
+</tr>
+
+
+{% for d in donors %}
+
+<tr>
+
+<td>{{d[1]}}</td>
+<td>{{d[2]}}</td>
+<td>{{d[3]}}</td>
+<td>{{d[4]}}</td>
+
+</tr>
+
+{% endfor %}
+
+
+</table>
